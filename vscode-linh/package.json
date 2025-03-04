@@ -1,0 +1,72 @@
+{
+    "name": "linh-language",
+    "displayName": "Linh Programming Language",
+    "description": "Language support for Linh Programming Language",
+    "version": "0.0.1",
+    "publisher": "linh-lang",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/linhprogramminglanguage/vscode-linh"
+    },
+    "main": "./extension/out/extension.js",
+    "engines": {
+        "vscode": "^1.97.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:linh",
+        "onCommand:vscode-linh.runCode"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "linh",
+                "aliases": [
+                    "Linh",
+                    "linh"
+                ],
+                "extensions": [
+                    ".li",
+                    ".linh"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "linh",
+                "scopeName": "source.linh",
+                "path": "./syntaxes/linh.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "linh",
+                "path": "./snippets/linh.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "vscode-linh.runCode",
+                "title": "Run Linh Code",
+                "icon": "$(play)"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "when": "resourceLangId == linh",
+                    "command": "vscode-linh.runCode",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.9",
+        "@types/vscode": "^1.97.0",
+        "typescript": "^5.8.2"
+    }
+}

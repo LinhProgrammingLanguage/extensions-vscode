@@ -1,0 +1,57 @@
+{
+    "Print Statement": {
+        "prefix": "print",
+        "body": [
+            "print($1);"
+        ],
+        "description": "Print statement"
+    },
+    "Variable Declaration": {
+        "prefix": "var",
+        "body": [
+            "var ${1:name} : ${2:type} = ${3:value};"
+        ],
+        "description": "Variable declaration with type"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition}) {",
+            "    ${2:// code}",
+            "}"
+        ],
+        "description": "If statement"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            "    ${2:// code}",
+            "}"
+        ],
+        "description": "While loop"
+    },
+    "Function Declaration": {
+        "prefix": "def",
+        "body": [
+            "def ${1:name}(${2:params}) {",
+            "    ${3:// code}",
+            "}"
+        ],
+        "description": "Function declaration"
+    },
+    "Map Declaration": {
+        "prefix": "map",
+        "body": [
+            "var ${1:name} : map = ${2:value};"
+        ],
+        "description": "Map declaration"
+    },
+    "Array Declaration": {
+        "prefix": "array",
+        "body": [
+            "var ${1:name} : array = ${2:value};"
+        ],
+        "description": "Array declaration"
+    }
+}
